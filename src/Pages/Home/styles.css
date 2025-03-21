@@ -1,0 +1,32 @@
+@media screen and (min-width: 1000px) {
+  .file-uploader-home-xl {
+    border-radius: 50px;
+    .file-uploader {
+      border-radius: 43px;
+      padding: 70px 65px;
+      .upload-icon {
+        width: 50px;
+      }
+      .upload-title {
+        font-size: 28px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1090px) {
+  .file-uploader-home-xl {
+    border-radius: 60px;
+    .file-uploader {
+      border-radius: 53px;
+      padding: 100px 90px;
+      .upload-icon {
+        width: 60px;
+      }
+      .upload-title {
+        font-size: 32px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

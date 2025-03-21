@@ -1,0 +1,14 @@
+.navbar{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 412px) {
+    .navbar{
+        padding: 10px 20px;        
+    }
+}
+.navbar-icon{
+    height: fit-content;
+}
