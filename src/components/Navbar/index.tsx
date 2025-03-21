@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IconNameType, ThemeType } from "../../utils/types";
 import { COLORS, ICON_NAMES, THEME_VALUES } from "../../utils/constants";
