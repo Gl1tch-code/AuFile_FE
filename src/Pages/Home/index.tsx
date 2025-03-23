@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTheme } from "../../core/context/ThemeContext";
 import { FileUploader } from "aufile";

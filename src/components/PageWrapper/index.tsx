@@ -17,7 +17,6 @@ type PropsType = {
 
 export default function PageWrapper({ children, infos = false }: PropsType) {
   const { theme, toggleTheme } = useTheme();
-  // console.log(children);
 
   useEffect(() => {
     const interBubble = document.querySelector<HTMLDivElement>(".interactive")!;
@@ -87,37 +86,12 @@ export default function PageWrapper({ children, infos = false }: PropsType) {
         <div className="flex items-center justify-center 2lg:justify-start w-full">
           <Show if={infos}>
             <p className="text-secondaryText font-light font-poppins text-xl pb-24 2lg:pb-4 text-center 2lg:text-left">
-              Info: the files are automatically
+              <b className="font-poppins text-xl font-bold">Info:</b> the files are automatically
               <br />
               deleted after not using them for 3 days
             </p>
           </Show>
           <Navbar theme={theme} />
-        </div>
-      </div>
-      <div className="gradient-bg">
-        <svg xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="goo">
-              <feGaussianBlur
-                in="SourceGraphic"
-                stdDeviation="10"
-                result="blur"
-              />
-              <feColorMatrix
-                in="blur"
-                mode="matrix"
-                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
-                result="goo"
-              />
-              <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-          </defs>
-        </svg>
-        <div className="gradients-container">
-          <div className="g1"></div>
-          <div className="g2"></div>
-          <div className="interactive"></div>
         </div>
       </div>
     </>
