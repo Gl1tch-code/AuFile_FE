@@ -3,13 +3,13 @@
     border-radius: 50px;
     .file-uploader {
       border-radius: 43px;
-      padding: 70px 65px;
-      .upload-icon {
-        width: 50px;
-      }
+      padding: 60px 65px;
       .upload-title {
         font-size: 28px;
         white-space: nowrap;
+      }
+      .upload-icon{
+        width: 80px;
       }
     }
   }
@@ -17,15 +17,16 @@
 @media screen and (min-width: 1090px) {
   .file-uploader-home-xl {
     border-radius: 60px;
+    padding: 12px;
     .file-uploader {
-      border-radius: 53px;
-      padding: 100px 90px;
-      .upload-icon {
-        width: 60px;
-      }
+      border-radius: 48px;
+      padding: 80px;
       .upload-title {
         font-size: 32px;
         white-space: nowrap;
+      }
+      .upload-icon{
+        width: 90px;
       }
     }
   }

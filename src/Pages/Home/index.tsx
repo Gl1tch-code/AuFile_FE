@@ -3,10 +3,11 @@ import PageWrapper from "../../components/PageWrapper";
 import { useTheme } from "../../core/context/ThemeContext";
 import { FileUploader } from "aufile";
 import "aufile/dist/styles.css";
-import "./styles.css";
 import { THEME_VALUES } from "../../utils/constants";
 import Show from "../../core/Show";
 import ArrowIcon from "../../icons/ArrowIcon";
+import "./styles.css";
+import Footer from "../../components/Footer";
 
 export default function Home(): React.JSX.Element {
   const { theme } = useTheme();
@@ -32,7 +33,7 @@ export default function Home(): React.JSX.Element {
 
   return (
     <>
-      <PageWrapper infos>
+      <PageWrapper infos className="items-center justify-between">
         <div
           className={`w-full flex justify-between gap-14 md:gap-4 ${
             startedUploading ? "flex-col md:flex-row" : "flex-col"
@@ -48,9 +49,15 @@ export default function Home(): React.JSX.Element {
             <h1 className="transition-all font-archivo text-4xl sm:text-5xl xl:text-6xl text-primaryText font-bold">
               Upload Your File
             </h1>
-            <p className={`transition-all font-poppins text-secondaryText text-lg sm:text-xl md:text-2xl tracking-wider leading-8 ${startedUploading ? 'w-full xl:w-3/5' : ' w-full md:w-3/5 xl:w-1/2'}`}>
-              without using your disk/server space.
-              Free, secured and well performed
+            <p
+              className={`transition-all font-poppins text-secondaryText text-lg sm:text-xl md:text-2xl tracking-wider leading-8 ${
+                startedUploading
+                  ? "w-full xl:w-3/5"
+                  : " w-full md:w-3/5 xl:w-1/2"
+              }`}
+            >
+              without using your disk/server space. Free, secured and well
+              performed
             </p>
           </div>
           <div
@@ -150,6 +157,7 @@ export default function Home(): React.JSX.Element {
           </div>
         </div>
       </div>
+      <Footer showExplorApiDocs />
     </>
   );
 }

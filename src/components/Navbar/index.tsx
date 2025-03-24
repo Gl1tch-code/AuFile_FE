@@ -38,7 +38,7 @@ export default function Navbar({ theme }: PropsType) {
     <div
       className={`${theme === THEME_VALUES.DARK ? "bg-primary" : "bg-white"} 
             flex justify-between items-center rounded-full px-6 py-3 navbar gap-8 xs:gap-10
-            bottom-6 sm:bottom-10`}
+            bottom-6 sm:bottom-10 h-auto`}
     >
       <Link to="/recently-uploaded">
         <CategoriesIcon

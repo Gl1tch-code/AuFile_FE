@@ -13,9 +13,10 @@ import "./styles.css";
 type PropsType = {
   children: string | React.JSX.Element | React.JSX.Element[];
   infos?: boolean;
+  className?: string;
 };
 
-export default function PageWrapper({ children, infos = false }: PropsType) {
+export default function PageWrapper({ className, children, infos = false }: PropsType) {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -47,7 +48,7 @@ export default function PageWrapper({ children, infos = false }: PropsType) {
   return (
     <>
       <div
-        className={`${theme} transition-all main-container background px-3 xs:px-8 sm:px-16 xl:px-48 py-6 sm:py-10 flex flex-col justify-between items-center gap-20`}
+        className={`${theme} transition-all main-container background px-3 xs:px-8 sm:px-16 xl:px-48 py-6 sm:py-10 flex flex-col gap-20 ${className}`}
       >
         <div className="w-full flex justify-between items-center">
           <div className="w-14 xs:w-16 h-auto" />
